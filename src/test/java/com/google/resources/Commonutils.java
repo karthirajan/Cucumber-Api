@@ -21,12 +21,12 @@ public class Commonutils {
 		//given
 		
 		PrintStream stream = new PrintStream(new FileOutputStream("logging.txt"));
-		
+		if(request == null){
 		 request = new RequestSpecBuilder().setBaseUri("https://rahulshettyacademy.com").addQueryParam("key", "qaclick123")
 				 .addFilter(RequestLoggingFilter.logRequestTo(stream))
 				 .addFilter(ResponseLoggingFilter.logResponseTo(stream))
 		.setContentType(ContentType.JSON).build();
-		 
+		}
 		 return request;
 
 	}
