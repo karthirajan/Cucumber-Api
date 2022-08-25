@@ -1,0 +1,69 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "add place",
+        "description": "",
+        "id": "google-maps;add-place",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2451699,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "add place payload",
+            "match": {
+              "location": "GoogleMapsSteps.add_place_payload()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1732792300,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user calls addPlaceApi with post http request",
+            "match": {
+              "location": "GoogleMapsSteps.user_calls_addPlaceApi_with_post_http_request()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2353026100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user verify \"addPlaceApi\" status code 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"addPlaceApi\"",
+                  "offset": 12
+                },
+                {
+                  "val": "200",
+                  "offset": 38
+                }
+              ],
+              "location": "GoogleMapsSteps.user_verify_status_code(String,Integer)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Google Maps",
+    "description": "",
+    "id": "google-maps",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/GoogleMaps.feature",
+    "tags": []
+  }
+]
